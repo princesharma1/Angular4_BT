@@ -1,0 +1,189 @@
+
+<div class="businesstoday_outer_wrapper">
+
+    
+
+
+    <div class="businesstoday_bigstory_chunk bt_marginbtm_main" *ngIf="bthomejsondata">
+      <div class="businesstoday_com_head">
+        <h2>Big Story</h2>
+        <a href="#" title="more">more &raquo;</a> </div>
+       
+      <div class="img_area" *ngFor="let data1 of bthomejsondata[6] | slice:0:1;"> <a href="story/{{getMyUrl(data1.sef_url,data1.id)}}" title="{{data1.title}}"> 
+          <img src="http://media2.intoday.in/btmt/images/stories/{{data1.largeImage}}" alt="" title=""> </a>
+        <h1><a href="" title="{{data1.title}}">{{data1.introtext}}</a></h1>
+      </div>
+      <div class="businesstoday_com_thumb">
+        <ul>
+          <li *ngFor="let data1 of bthomejsondata[6] | slice:1:5;">
+            <div class="section">
+              <div class="img_area"> <a href="story/{{getMyUrl(data1.sef_url,data1.id)}}" title=""><img src="http://media2.intoday.in/btmt/images/stories/{{data1.image}}"  alt="{{data1.title}}" title="{{data1.title}}"></a> </div>
+              <div class="text_area">
+                <p><a href="story/{{getMyUrl(data1.sef_url,data1.id)}}" title="{{data1.title}}">{{data1.title}}</a></p>
+            
+              </div>
+            </div>
+          </li>
+         
+        </ul>
+      
+     </div>
+    </div>
+
+
+
+     <div class="businesstoday_videos_chunk bt_marginbtm_main" *ngIf="bthomejsondata">
+
+       <div class="businesstoday_com_head">
+        <h2>Videos</h2>
+        <a href="{{catcontenturl}}" title="more">more &raquo;</a> </div>
+      <div class="businesstoday_video"> 
+        
+        <!-- Swiper -->
+        <div class="swiper-container">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide" *ngFor="let data1 of bthomejsondata[8]  | slice:1:6;let i = index;">
+              <div class="outer_area"><a href="video/{{getMyUrl(data1.sef_url,data1.id)}}"  title=""><img src="http://media2.intoday.in/btmt/images/stories/{{data1.largeImage}}"  alt="{{data1.title}}" title="{{data1.title}}"><em></em> <strong>{{data1.title}}</strong></a></div>
+            </div>
+   
+          </div>
+          <!-- Add Pagination -->
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+      <div class="clearfix"></div>
+    
+    </div>
+
+
+ <div class="businesstoday_markets_chunk bt_marginbtm_main"  *ngIf="bthomejsondata">
+      <div class="businesstoday_com_head">
+        <h2>Top News</h2>
+        <a href="#" title="more">more &raquo;</a> </div>
+      <div class="businesstoday_com_thumb">
+        <ul>
+          <li *ngFor="let data1 of bthomejsondata[5];let i = index;">
+            <div class="section">
+              <div class="img_area"> <a href="story/{{getMyUrl(data1.sef_url,data1.id)}}" title=""><img src="http://media2.intoday.in/btmt/images/stories/{{data1.image}}"  alt="{{data1.title}}" title="{{data1.title}}"></a> </div>
+              <div class="text_area">
+                <p><a href="story/{{getMyUrl(data1.sef_url,data1.id)}}" title="">{{data1.title}}</a></p>
+              </div>
+            </div>
+          </li>
+         </ul>
+      </div>
+    </div>
+
+     <div class="businesstoday_markets_chunk bt_marginbtm_main"  *ngIf="bthomejsondata">
+      <div class="businesstoday_com_head">
+        <h2>From the Magazine</h2>
+        <a href="section/117/1/from-the-magazine.html" title="more">more &raquo;</a> </div>
+      <div class="businesstoday_com_thumb">   
+        <ul>
+          <li *ngFor="let data1 of bthomejsondata[0];let i = index;">
+            <div class="section">
+              <div class="img_area"> <a href="story/{{getMyUrl(data1.sef_url,data1.id)}}" title=""><img src="http://media2.intoday.in/btmt/images/stories/{{data1.image}}"  alt="{{data1.title}}" title="{{data1.title}}"></a> </div>
+              <div class="text_area">
+                <p><a href="story/{{getMyUrl(data1.sef_url,data1.id)}}" title="">{{data1.title}}</a></p>
+              </div>
+            </div>
+          </li>
+         </ul>
+      </div>
+    </div>
+
+
+
+       <div class="businesstoday_markets_chunk bt_marginbtm_main"  *ngIf="bthomejsondata">
+      <div class="businesstoday_com_head">
+        <h2>Markets</h2>
+        <a href="section/111/1/markets.html" title="more">more &raquo;</a> </div>
+      <div class="businesstoday_com_thumb">
+        <ul>
+          <li *ngFor="let data1 of bthomejsondata[1];let i = index;">
+            <div class="section">
+              <div class="img_area"> <a href="story/{{getMyUrl(data1.sef_url,data1.id)}}" title=""><img src="http://media2.intoday.in/btmt/images/stories/{{data1.image}}"  alt="{{data1.title}}" title="{{data1.title}}"></a> </div>
+              <div class="text_area">
+                <p><a href="story/{{getMyUrl(data1.sef_url,data1.id)}}" title="">{{data1.title}}</a></p>
+              </div>
+            </div>
+          </li>
+         
+        </ul>
+      </div>
+    </div>
+
+
+
+
+<div class="businesstoday_photos_chunk bt_marginbtm_main"  *ngIf="bthomejsondata">
+
+       <div class="businesstoday_com_head">
+        <h2>Photos</h2>
+        <a href="{{catcontenturl}}" title="more">more &raquo;</a> </div>
+      <div class="businesstoday_photo"> 
+        
+        <!-- Swiper -->
+        <div class="swiper-container">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide" *ngFor="let data1 of bthomejsondata[7] | slice:1:6;let i = index">
+              <div class="outer_area"><a href="story/{{getMyUrl(data1.sef_url,data1.id)}}"title=""><img src="http://media2.intoday.in/btmt/images/Photo_gallery/{{data1.image}}"  alt="{{data1.title}}" title="{{data1.title}}"><em></em> <strong>{{data1.Gallery_name}}</strong></a></div>
+            </div>
+   
+          </div>
+          <!-- Add Pagination -->
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+      <div class="clearfix"></div>
+    
+    </div>
+
+
+        <div class="businesstoday_technology_chunk bt_marginbtm_main"  *ngIf="bthomejsondata">
+      <div class="businesstoday_com_head">
+        <h2>Technology</h2>
+        <a href="section/110/1/technology.html" title="more">more &raquo;</a> </div>
+      <div class="businesstoday_com_thumb">
+        <ul>
+          <li *ngFor="let data1 of bthomejsondata[3];let i = index;">
+            <div class="section">
+              <div class="img_area"> <a href="story/{{getMyUrl(data1.sef_url,data1.id)}}" title=""><img src="http://media2.intoday.in/btmt/images/stories/{{data1.image}}"  alt="{{data1.title}}" title="{{data1.title}}"></a> </div>
+              <div class="text_area">
+                <p><a href="story/{{getMyUrl(data1.sef_url,data1.id)}}" title="">{{data1.title}}</a></p>
+              </div>
+            </div>
+          </li>
+         
+        </ul>
+      </div>
+    </div>
+
+
+
+
+       <div class="businesstoday_markets_chunk bt_marginbtm_main"  *ngIf="bthomejsondata">
+      <div class="businesstoday_com_head">
+        <h2>Opinion</h2>
+        <a href="section/102/1/opinion.html" title="more">more &raquo;</a> </div>
+      <div class="businesstoday_com_thumb">
+        <ul>
+          <li *ngFor="let data1 of bthomejsondata[4];let i = index;">
+            <div class="section">
+              <div class="img_area"> <a href="story/{{getMyUrl(data1.sef_url,data1.id)}}" title=""><img src="http://media2.intoday.in/btmt/images/stories/{{data1.image}}"  alt="{{data1.title}}" title="{{data1.title}}"></a> </div>
+              <div class="text_area">
+                <p><a href="story/{{getMyUrl(data1.sef_url,data1.id)}}" title="">{{data1.title}}</a></p>
+              </div>
+            </div>
+          </li>
+         
+        </ul>
+      </div>
+    </div>
+
+
+
+
+
+
+</div>

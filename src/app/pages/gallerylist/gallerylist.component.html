@@ -1,0 +1,43 @@
+
+
+
+
+
+
+
+
+<div class="bt_wrapper_container_section">
+<div class="bt_ptoto_listing_container">
+
+
+<div class="bt_breadcrumb">
+<a href="#" title="">Home</a>  {{title}}
+</div>
+
+
+
+<div class="businesstoday_section_chunk bt_marginbtm_main" *ngIf="btgallerysection">
+      <div class="businesstoday_com_head">
+        <h2> {{title}}</h2>
+        <a href="#" title="more">more »</a> </div>
+      <div class="businesstoday_com_thumb">
+        <ul>
+         <li *ngFor="let sectionData1 of btgallerysection">
+            <div class="section photo_section_bt">
+              <div class="img_area"> <a href="#" title=""><img src="http://media2.intoday.in/btmt/images/Photo_gallery/{{sectionData1.image}}" alt="{{sectionData1.imageAltText}}" title="">
+				<span class="photo_icon_bt"></span>  
+              </a> 
+              
+              </div>
+              <div class="text_area">
+                   <p><a href="/gallery/{{getMyUrl(sectionData1.sef_url,sectionData1.id)}}" title="{{sectionData1.title}}">{{sectionData1.title}}</a></p>
+              </div>
+            </div>
+          </li>
+
+
+
+        </ul>
+      </div>
+    </div>
+</div>

@@ -1,0 +1,36 @@
+<div class="businesstoday_outer_wrapper video_details">
+  <div class="bt_breadcrumb"> <a href="">Home</a> <a href="/galleries">Photo</a> {{galleryData?.sef_url}} </div>
+  <div class="bt_video_details_container">
+     
+    <div class="bt_photo_main"> <!-- [@slideInOut]='menuState' -->
+      <div class="bt_photo_section">
+        <div class="bt_phto_title">
+          <strong>{{galleryData?.galleryTitle}}</strong>
+        </div>
+      </div>
+      <div class="bt_photo_section">
+        <div class="bt_phto_slide">
+          <img src="http://media2.intoday.in/btmt/images/Photo_gallery/{{galleryData?.photoTitle}}" alt="" width="100%" style="height:230px;">
+        </div> 
+           <div class="prev_next">
+          <div class="prev_arr">
+            <a href="javascript:void(0)" title="" (click)="prev($event)" *ngIf="cnt!=1"> <img src="http://media2.intoday.in/indiatoday_wap/resources/images/left.png" alt="Next" border="0"></a>
+          </div>
+          <div class="nxt_arr">
+            <a href="javascript:void(0)" title="" (click)="next(galleryData?.photoCount)"> <img src="http://media2.intoday.in/indiatoday_wap/resources/images/right.png" alt="Next" border="0"></a>
+          </div>
+        </div>       
+      </div>
+      <div class="bt_photo_section">
+        <div class="photo_number" style="text-align:center;">
+          {{cnt}} of <strong>{{galleryData?.photoCount}}</strong>                    
+         </div>
+        <div class="bt_photo_caption" [innerHtml]="galleryData?.photoCaption"> </div>
+      </div>
+    </div>
+  </div>
+  <!--<button (click)="prev()">Prev</button>
+<div class="image_slider">
+  <img src="http://media2.intoday.in/btmt/images/Photo_gallery/{{galleryData?.photoTitle}}" width="200px" height="200px">
+</div>
+<button (click)="next(galleryData?.photoCount)">Next</button>-->

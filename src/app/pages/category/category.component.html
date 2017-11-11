@@ -1,0 +1,42 @@
+<div class="bt_wrapper_container bt_section_container" *ngIf="btcategorydata">
+
+
+    <div class="bt_breadcrumb">
+    <a href="{{base_url_home}}">Home</a> 
+    
+{{btcategorydata && btcategorydata[0].categoryTitle}}
+ 
+  </div>
+ <div class="bt_section_listing">
+
+
+
+    <div class="businesstoday_section_chunk bt_marginbtm_main" *ngIf="btcategorydata">
+      <div class="businesstoday_com_head">
+        <h2>{{btcategorydata[0].categoryTitle}}</h2>
+        <a href="#" title="more">more »</a> </div>
+      <div class="businesstoday_com_thumb" >
+        <ul>
+ 
+          <li *ngFor="let sectionData1 of btcategorydata">
+            <div class="section">
+              <div class="img_area"> <a href="sefTitle" title=""><img src="http://media2.intoday.in/btmt/images/stories/{{sectionData1.image}}" alt="{{sectionData1.imageAltText}}" title=""></a> </div>
+              <div class="text_area">
+                <p><a href="/story/{{getMyUrl(sectionData1.sef_url,sectionData1.id)}}" title="{{sectionData1.title}}">{{sectionData1.title}}</a></p>
+              </div>
+            </div>
+          </li>
+
+
+        </ul>
+      </div>
+    </div>
+
+
+ </div>
+
+
+</div>
+
+
+

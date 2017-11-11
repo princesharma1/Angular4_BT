@@ -1,0 +1,50 @@
+<div class="bt_wrapper_container bt_section_container" >
+
+
+    <div class="bt_breadcrumb" *ngIf="btsectiondata">
+    <a href="">Home</a> 
+    
+{{btsectiondata && btsectiondata[0].sectionTitle}}
+ 
+  </div>
+ <div class="bt_section_listing">
+
+
+
+
+    <div class="businesstoday_section_chunk bt_marginbtm_main" *ngIf="btsectiondata">
+      <div class="businesstoday_com_head">
+        <h2>{{btsectiondata[0].sectionTitle}}</h2>
+        <a href="#" title="more">more »</a> </div>
+      <div class="businesstoday_com_thumb" >
+        <ul>
+ 
+          <li *ngFor="let sectionData1 of btsectiondata">
+            <div class="section">
+              <div class="img_area"> <a href="sefTitle" title="" >
+                <span *ngIf="sectionData1.image;else elseblock;">
+                <img src="http://media2.intoday.in/btmt/images/stories/{{sectionData1.image}}" alt="{{sectionData1.imageAltText}}" title="">
+                </span>
+             <ng-template #elseblock>
+ <img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNi4wLjQsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB3aWR0aD0iNDAwcHgiIGhlaWdodD0iMzAwcHgiIHZpZXdCb3g9IjAgMCA0MDAgMzAwIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCA0MDAgMzAwIiB4bWw6c3BhY2U9InByZXNlcnZlIj4NCjxyZWN0IGZpbGw9IiNGMkYwRjEiIHdpZHRoPSI0MDAiIGhlaWdodD0iMzAwIi8+DQo8Zz4NCgk8cGF0aCBmaWxsPSIjQzlDOUM5IiBkPSJNMTQ4LjcwMiwxMDcuODIxdjgzLjM1OWgxMDIuNTkydi04My4zNTlIMTQ4LjcwMnogTTI0NC44ODIsMTg0Ljc2OGgtODkuNzY3di03MC41MzVoODkuNzY3VjE4NC43Njh6Ii8+DQoJPHBhdGggZmlsbD0iI0M5QzlDOSIgZD0iTTE4Ny4xNzUsMTY1LjUzbDE5LjIzMy02LjQxMmw2LjQxMi0xOS4yMzZsNi40MTMsMTIuODI0bDYuNDEyLDE5LjIzNmw2LjQxMiw2LjQxMmg2LjQxMnYtNTcuNzA5aC03Ni45NDMNCgkJdjU3LjcwOWgxMi44MjRMMTg3LjE3NSwxNjUuNTN6IE0xODMuOTgxLDEyNy4wNThjNS4zMTEsMCw5LjYwNiw0LjMwMiw5LjYwNiw5LjYxMmMwLDUuMzE2LTQuMjk1LDkuNjI1LTkuNjA2LDkuNjI1DQoJCWMtNS4zMjIsMC05LjYzMS00LjMwOC05LjYzMS05LjYyNUMxNzQuMzUxLDEzMS4zNTksMTc4LjY1OSwxMjcuMDU4LDE4My45ODEsMTI3LjA1OHoiLz4NCjwvZz4NCjwvc3ZnPg0K" alt="{{sectionData1.imageAltText}}" title="">
+             </ng-template>
+              </a> </div>
+              <div class="text_area">
+                <p><a href="/story/{{getMyUrl(sectionData1.sef_url,sectionData1.id)}}" title="{{sectionData1.title}}">{{sectionData1.title}}</a></p>
+              </div>
+            </div>
+          </li>
+
+
+        </ul>
+      </div>
+    </div>
+
+
+ </div>
+
+
+</div>
+
+
+

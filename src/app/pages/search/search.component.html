@@ -1,0 +1,52 @@
+
+
+
+  <div class="businesstoday_outer_wrapper"> 
+    
+    <!--ad chunk-->
+    
+    <!-- <div class="businesstoday_ad_chunk"> <img src="images/ad.png" alt="" title=""> </div> -->
+    
+    <!--Top news chunk-->
+    
+    <div class="businesstoday_topnews_chunk bt_marginbtm_main">
+      <div class="businesstoday_com_head padhead">
+        <ul class="tabbing">
+          <li>
+            <h2><a href="javascript:void(0)" (click)="changeTab('story')" class="tab01 active">Article</a></h2>
+          </li>
+          <li>
+            <h2><a href="javascript:void(0)" (click)="changeTab('photo')" class="tab02">Photo</a></h2>
+          </li>
+        </ul>
+      </div>
+      <div class="businesstoday_com_thumb active_cont" id="tab01">
+
+      <ul>
+          <li *ngFor="let txt of btsearchdata">
+            <div class="section">
+              <div class="img_area"> <a href="#" title=""><img src="http://media2.intoday.in/btmt/images/stories/{{txt.image}}" alt="" title=""></a> </div>
+              <div class="text_area">
+                <p><a href="/story/{{getMyUrl(txt.sef_url,txt.id)}}" title="">{{txt.title}}</a></p>
+              </div>
+            </div>
+          </li>
+
+        </ul> 
+      </div>
+      <div class="businesstoday_com_thumb" id="tab02">
+       
+         <ul>
+              <li *ngFor="let txt of btsearchdata">
+            <div class="section">
+              <div class="img_area"> <a href="#" title=""><img src="http://media2.intoday.in/btmt/images/Photo_gallery/{{txt.image}}" alt="" title=""></a> </div>
+              <div class="text_area">
+                <p><a href="/gallery/{{getMyUrlphoto(txt.sef_url,txt.id)}}" title="">{{txt.title}}</a></p>
+              </div>
+            </div>
+          </li>
+   
+        </ul> 
+      </div>
+    </div>
+  </div>

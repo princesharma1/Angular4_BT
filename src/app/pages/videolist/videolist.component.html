@@ -1,0 +1,38 @@
+<div class="bt_wrapper_container_section">
+<div class="bt_ptoto_listing_container" *ngIf="btvideosection">
+
+
+<div class="bt_breadcrumb">
+<a href="#" title="">Home</a> {{title}}
+</div>
+
+
+
+<div class="businesstoday_section_chunk bt_marginbtm_main">
+      <div class="businesstoday_com_head">
+        <h2> {{title}}</h2>
+        <a href="#" title="more">more »</a> </div>
+      <div class="businesstoday_com_thumb">
+        <ul>
+          <li *ngFor="let vData of btvideosection">
+            <div class="section photo_section_bt">
+              <div class="img_area"> <a href="{{vData.contentURL}}" title=""><img src="http://media2.intoday.in/btmt/images/stories/{{vData.smallImage}}" alt="" title="">
+				<span class="video_icon_bt"></span>  
+              </a> 
+              
+              </div>
+              <div class="text_area">
+                <p><a href="video/{{getMyUrl(vData.sef_url,vData.id)}}" title="{{vData.title}}">{{vData.title}}</a></p>
+              </div>
+            </div>
+          </li>
+
+
+
+        </ul>
+      </div>
+    </div>
+
+</div>
+
+</div>

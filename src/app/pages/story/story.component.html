@@ -1,0 +1,98 @@
+<div class="bt_wrapper_container" *ngIf="btstoryjsondata">
+<div class="bt_story_container" *ngFor="let storyData of btstoryjsondata">
+
+
+<div class="bt_breadcrumb">
+<a href="">Home</a> 
+<a href="section/{{storyData.sectionId}}/1/{{storyData.sectionSefTitle}}">{{storyData.sectionTitle}}</a>  
+<!-- <a href="category/{{storyData.categoryId}}/{{storyData.categorySefTitle}}">{{storyData.categoryTitle}}</a>  -->
+	<a href="category/{{getCatURL(storyData.sectionSefTitle,storyData.sectionId)}}">{{storyData.categoryTitle}}</a> 
+	Story 
+</div>
+
+<div class="bt_header">
+	<div class="heading_bt">
+        {{storyData.titleAlias}}
+	</div>
+	<div class="bt_byline" >
+		 {{storyData.byline}} {{storyData.city}}, {{storyData.createdDate}} | {{storyData.createdTime}} 
+	</div>
+	<div class="bt_kicker_hd" [innerHTML] = "storyData.introtext">
+		 {{innerHTML}}
+	</div>
+<div class="bt_socials">
+	<ul><li><a href="#"><img src="http://media2.intoday.in/indiatoday_wap/resources/css/images/img/facebook.jpg" alt=""></a></li><li><a href="#"><img src="http://media2.intoday.in/indiatoday_wap/resources/css/images/img/twitter.jpg" alt=""></a></li><li><a href="#"><img src="http://media2.intoday.in/indiatoday_wap/resources/css/images/img/gplus.jpg" alt=""></a></li><li><a href="#"><img src="http://media2.intoday.in/indiatoday_wap/resources/css/images/img/whatsapp.jpg" alt=""></a></li><li><a href="#"><img src="http://media2.intoday.in/indiatoday_wap/resources/css/images/img/message.jpg" alt=""></a></li></ul>
+
+</div>
+</div>
+
+
+<div class="bt_main_image">
+    <img class="main_story_image" 
+    src="http://media2.intoday.in/btmt/images/stories/{{storyData.largeKickerImage}}"  border="0" align="middle" alt="IT firms may cold-shoulder B Tech-only techies in future: Mohandas Pai" title="IT firms may cold-shoulder B Tech-only techies in future: Mohandas Pai" class="_ActiveImpulseImg">
+
+	<span class="caption_text" *ngIf="storyData.largeKickerImageAltText!=''"><p>{{storyData.largeKickerImageAltText}}</p></span>
+
+</div>
+
+<div class="bt_story_cont_main">
+<div class="bt_story_cont">
+<div class="bt_full_story" >
+<div innerHTML = "{{storyData.fullDescription}}"></div>
+<p innerHTML = "{{ storyData.storyBlurb }}"></p>
+    
+</div>
+
+</div>
+
+</div>
+
+<script src="http://vuukle.com/js/vuukle.js" type="text/javascript"></script>
+<!--To display comments platform code start here-->
+
+<div class="vuukle">
+
+<a name="comment"></a>
+<div id="vuukle_div"></div>
+<!-- <script type="text/javascript">
+	var UNIQUE_ARTICLE_ID = "story_<%=id%>"; 
+	var SECTION_TAGS =  "<%=vuukleSectionTags%>, story";
+	var ARTICLE_TITLE = "<% out.print(aDTO.getTitleAlias().replace("\"",""));%>";
+	var GA_CODE = "UA-795349-14";
+	var VUUKLE_API_KEY = "dc34b5cc-453d-468a-96ae-075a66cd9eb7"; 
+	var TRANSLITERATE_LANGUAGE_CODE = ""; //"en" for English, "hi" for hindi
+	var VUUKLE_COL_CODE = "d00b26";
+	var ARTICLE_AUTHORS = '<%=encodedString%>'; 
+	create_vuukle_platform(VUUKLE_API_KEY, UNIQUE_ARTICLE_ID, "0", SECTION_TAGS, ARTICLE_TITLE, TRANSLITERATE_LANGUAGE_CODE , "1", "", GA_CODE, VUUKLE_COL_CODE, ARTICLE_AUTHORS);
+</script> -->
+<!--To display comments platform code end here-->
+
+<script type="text/javascript">   
+	var UNIQUE_ARTICLE_ID = "story_244577"; 
+	var SECTION_TAGS =  ", story";
+	var ARTICLE_TITLE = "Probe against cheap Chinese products: Chinese media says India surpasses US in protectionism";
+	var GA_CODE = "UA-795349-14";
+	var VUUKLE_API_KEY = "dc34b5cc-453d-468a-96ae-075a66cd9eb7"; 
+	var TRANSLITERATE_LANGUAGE_CODE = ""; //"en" for English, "hi" for hindi
+	var VUUKLE_COL_CODE = "d00b26";
+	var ARTICLE_AUTHORS = 'JTVCJTdCJTIwJTIybmFtZSUyMjolMjAlMjJCVCUyME9ubGluZSUyMCUyMiwlMjAlMjAlMjAlMjJ0eXBlJTIyOiUyMCUyMkludGVybmFsJTIwJTIyJTdEJTVE'; 
+	create_vuukle_platform(VUUKLE_API_KEY, UNIQUE_ARTICLE_ID, "0", SECTION_TAGS, ARTICLE_TITLE, TRANSLITERATE_LANGUAGE_CODE , "1", "", GA_CODE, VUUKLE_COL_CODE, ARTICLE_AUTHORS);
+</script>
+
+
+</div>
+
+
+
+</div>
+<div class="getdetail">Get latest news &amp; live updates on the go on your phone with our <a href="https://play.google.com/store/apps/details?id=com.indiatoday"> News App</a>. Download <a href="https://play.google.com/store/apps/details?id=com.indiatoday">The India Today news app</a> on your device</div>
+<div class="addcomment_area" id="someID"><a href="#"><strong>Add Comment</strong><em> + </em></a></div>
+
+<div class="next_prv_h">
+<div class="outer_area">
+
+<div class="nxtprev_story"><a href="http://m.indiatoday.in/story/hamburg-g20-summit-germnay-angel-merkel-pm-modi-trump-north-korea/1/996465.html" class="snext_arrow" id="next_11"></a><h2><a href="http://m.indiatoday.in/story/hamburg-g20-summit-germnay-angel-merkel-pm-modi-trump-north-korea/1/996465.html">Next Story</a></h2><ul class="nxtpreslider"><li><a href="http://m.indiatoday.in/story/hamburg-g20-summit-germnay-angel-merkel-pm-modi-trump-north-korea/1/996465.html">Why Hamburg G20 Summit is going to be stormy</a></li></ul></div>
+
+<div class="nxtprev_story prevS"><a href="http://m.indiatoday.in/story/china-india-malabar-naval-exercise-japan-us-navy-submarines/1/996471.html" title="" class="sprev_arrow" id="prev_11"></a><h2 class="talign"><a href="http://m.indiatoday.in/story/china-india-malabar-naval-exercise-japan-us-navy-submarines/1/996471.html" title="">Previous Story</a></h2><ul class="nxtpreslider"><li><a href="http://m.indiatoday.in/story/china-india-malabar-naval-exercise-japan-us-navy-submarines/1/996471.html" title="">China plays down concern over largest ever Malabar naval exercise</a></li></ul></div>
+
+<div class="clear"></div></div></div>
